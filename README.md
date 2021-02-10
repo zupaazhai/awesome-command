@@ -1,6 +1,24 @@
 # PHP
 ## Install PHP7.3-FPM
 https://github.com/zupaazhai/install-php7-3-fpm
+## Switch PHP 7.4 and 7.3
+```
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+
+sudo apt-get install php7.3
+sudo apt-get install php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-mysql php7.3-mbstring  php7.3-zip php7.3-fpm php7.3-intl php7.3-simplexml
+
+sudo a2dismod php7.4
+sudo a2enmod php7.3
+sudo service apache2 restart
+
+sudo update-alternatives --set php /usr/bin/php7.3
+sudo update-alternatives --set phar /usr/bin/phar7.3
+sudo update-alternatives --set phar.phar /usr/bin/phar.phar7.3
+sudo update-alternatives --set phpize /usr/bin/phpize7.3
+sudo update-alternatives --set php-config /usr/bin/php-config7.3
+```
 
 # MySQL
 ## Install MySQL
