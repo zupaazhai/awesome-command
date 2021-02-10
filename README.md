@@ -20,3 +20,7 @@ UPDATE mysql.user SET authentication_string=CONCAT('*', UPPER(SHA1(UNHEX(SHA1('N
 mysqladmin -S /var/run/mysqld/mysqld.sock shutdown
 service mysql start
 ```
+## Create new user for MySQL v.8
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
+```
