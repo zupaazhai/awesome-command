@@ -40,3 +40,8 @@ systemctl restart squid.service
 ```
 ufw allow 3128
 ```
+
+## Test proxy
+```
+curl -v -x http://zupaazhai:123456@localhost:3128 http://www.google.com/%
+```
